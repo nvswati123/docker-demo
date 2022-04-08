@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    imageName = "nvswati/docker-jenkins-project"
+    imagename = "nvswati/docker-jenkins-project"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
@@ -15,7 +15,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage = docker.build imageName
+          dockerImage = docker.build imagename
         }
       }
     }
